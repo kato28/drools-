@@ -1,0 +1,12 @@
+package Rules;
+
+import java.lang.Number;
+import com.total.anac.models.Sample;
+
+rule "règle_6 if temperature is greater than 37.0"
+	dialect "mvel"
+	when
+		sample : Sample( temperature > 37.0 )
+	then
+		sample.setCompUp( 3 );
+end

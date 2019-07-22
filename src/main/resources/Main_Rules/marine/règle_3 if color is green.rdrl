@@ -1,0 +1,13 @@
+package Main_Rules.marine;
+
+import java.lang.Number;
+import com.total.anac.models.Sample;
+
+rule "règle_3 if color is green"
+	dialect "mvel"
+	agenda-group "marine"
+	when
+		sample : Sample( color == "green" )
+	then
+		sample.addComment( 450 );
+end

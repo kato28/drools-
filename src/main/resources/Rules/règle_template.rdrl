@@ -1,0 +1,12 @@
+package Rules;
+
+import java.lang.Number;
+import com.total.anac.models.Sample;
+
+rule "règle_template"
+	dialect "mvel"
+	when
+		sample : Sample( color != "red" )
+	then
+		sample.setTemperature( 37.0 );
+end

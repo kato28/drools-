@@ -1,0 +1,13 @@
+package Main_Rules.auto;
+
+import java.lang.Number;
+import com.total.anac.models.Sample;
+
+rule "règle_2 if temperature is equal to 37.0" extends "règle_1 if color is red "
+	dialect "mvel"
+	agenda-group "auto"
+	when
+		sample1 : Sample( temperature == 37.0 )
+	then
+		sample1.setMeasUp( 1 );
+end

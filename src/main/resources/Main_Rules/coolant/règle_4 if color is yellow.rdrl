@@ -1,0 +1,15 @@
+package Main_Rules.coolant;
+
+import java.lang.Number;
+import com.total.anac.models.Sample;
+
+rule "règle_4 if color is yellow"
+	dialect "mvel"
+	salience 10
+	agenda-group "coolant"
+	when
+		sample : Sample( color == "yellow" )
+	then
+		sample.setTemperature( 37.0 );
+		sample.addComment( 500 );
+end
