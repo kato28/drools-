@@ -1,4 +1,4 @@
-Repository Init Content
+Decision manager rules
 =======================
 
-Your project description here.
+examples of guided rules on decision manager 
